@@ -1,0 +1,246 @@
+:root {
+    --rosa: #FFB6C8;
+    --rosa-claro: #FFE4EC;
+    --lavanda: #E8DFF5;
+    --menta: #E3F6F5;
+    --crema: #FFF8F2;
+    --blanco: #FFFFFF;
+
+    --texto-principal: #4A3F4D;
+    --texto-secundario: #7A6F7E;
+
+    --sombra: rgba(0, 0, 0, 0.08);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(
+        135deg,
+        var(--rosa-claro),
+        var(--lavanda),
+        var(--menta)
+    );
+    color: var(--texto-principal);
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+}
+
+/* Header */
+header {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 3rem;
+    animation: fadeInDown 1s ease;
+}
+
+.subtitle {
+    margin-top: 0.5rem;
+    color: var(--texto-secundario);
+    animation: fadeInUp 1s ease 0.3s both;
+}
+
+/* Sections as cards */
+section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 15px 40px var(--sombra);
+    animation: fadeInUp 1s ease;
+}
+
+/* Titles */
+section h2 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    color: var(--rosa);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--rosa), #FF8FAB);
+    display: block;
+    margin: 0.8rem auto 0;
+    border-radius: 5px;
+}
+
+/* Description */
+.description p {
+    color: var(--texto-secundario);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--blanco);
+    border-radius: 15px;
+    overflow: hidden;
+    animation: fadeInUp 1.2s ease;
+}
+
+thead th {
+    background: var(--rosa);
+    color: white;
+    padding: 1rem;
+    font-size: 0.95rem;
+}
+
+tbody td {
+    padding: 1.2rem;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    vertical-align: top;
+}
+
+tbody tr {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+tbody tr:hover {
+    background: var(--rosa-claro);
+    transform: scale(1.01);
+}
+
+tbody tr:nth-child(even) {
+    background: #FFF0F5;
+}
+
+tbody td:first-child {
+    font-weight: 600;
+    color: var(--texto-principal);
+}
+
+/* Code */
+code {
+    background: #3F3A45;
+    color: #FFDDE7;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+}
+
+pre code {
+    display: block;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Cities */
+#contenedorCiudades {
+    text-align: center;
+}
+
+#contenedorCiudades li {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 1.3rem;
+    background: linear-gradient(
+        to right,
+        var(--blanco),
+        var(--rosa-claro)
+    );
+    border-radius: 15px;
+    box-shadow: 0 8px 20px var(--sombra);
+    font-weight: 500;
+    animation: slideIn 0.5s ease both;
+    transition: transform 0.3s ease;
+}
+
+#contenedorCiudades li:hover {
+    transform: translateX(8px) scale(1.03);
+}
+
+/* Button */
+.boton-seccion {
+    text-align: center;
+}
+
+#btnMostrarLista {
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, var(--rosa), #FF8FAB);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px var(--sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#btnMostrarLista:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 30px var(--sombra);
+}
+
+/* Footer */
+footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+    color: var(--texto-secundario);
+    animation: fadeInUp 1.2s ease;
+}
+
+/* Animations (ORIGINALES) */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

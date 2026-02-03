@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM vs BOM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lista de datos</h1>
+            <p class="subtitle">Desarrollo de Software Frontend I</p>
+        </header>
+
+        <section class="description">
+            <h2>Descripción de la actividad</h2>
+            <p>
+                En esta actividad, exploraremos las diferencias entre el Document Object Model (DOM) y el Browser Object
+                Model (BOM) en JavaScript.
+                El DOM es una representación estructurada del contenido de una página web, permitiendo a los
+                desarrolladores manipular elementos HTML y sus atributos.
+                Por otro lado, el BOM proporciona acceso a las funcionalidades del navegador, como la gestión de
+                ventanas, historial y URL.
+                A través de un cuadro comparativo y una lista interactiva de ciudades, entenderemos mejor cómo estos dos
+                modelos trabajan juntos para crear experiencias web dinámicas.
+            </p>
+        </section>
+
+        <section class="cuadro-comparativo">
+            <h2>Cuadro-Comparativo: DOM vs BOM</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>DOM</th>
+                        <th>BOM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Definición</strong></td>
+                        <td>El DOM es una representación estructurada del documento HTML como un árbol de objetos.
+                            Es una interfaz de programación que permite a JavaScript acceder y manipular el
+                            contenido, estructura y estilos de una página web.</td>
+                        <td>El BOM es una interfaz que permite a JavaScript interactuar con el navegador en sí
+                            mismo, más allá del contenido del documento.
+                            No hay un estándar oficial, pero los navegadores modernos lo implementan de manera
+                            similar.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Que Controla</strong></td>
+                        <td><code>El contenido del documento HTML -elementos, atributos, textos, estilos, css, etc.</code></td>
+                        <td><code>Las funcionalidades del navegador-ventana, navegación, historial, ubicación, almacenamiento, etc</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Objetivo principal</strong></td>
+                        <td>
+                            <ul>
+                                <li>Acceder y modificar elementos HTML</li>
+                                <li>Cambiar contenido, estilos y atributos</li>
+                                <li>Responder a eventos del usuario</li>
+                                <li>Actualizar la pagina sin recargarla</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Controlar y obtener información del navegador</li>
+                                <li>Manipular la ventana del navegador</li>
+                                <li>Gestionar la navegación y el historial</li>
+                                <li>Acceder adatos del entorno del usuario</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Estandarización</strong></td>
+                        <td>Estandarizado por el W3C</td>
+                        <td>No está estandarizado oficialmente</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alcance</strong></td>
+                        <td>El alcance del DOM es el contenido del documento HTML.</td>
+                        <td>El alcance del BOM es el entorno del navegador.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ejemplo de codigo 1</strong></td>
+                        <td>
+                            <pre><code>document.getElementById("miElemento").style.color = "red";</code></pre>
+                        </td>
+                        <td>
+                            <pre><code>window.alert("Hola Mundo!");</code></pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ejemplo de codigo 2</strong></td>
+                        <td>
+                            <pre><code>let nuevoElemento = document.createElement("div");</code></pre>
+                        </td>
+                        <td>
+                            <pre><code>let anchoPantalla = window.innerWidth;</code></pre>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="Lista-ciudades">
+            <h2>Lista de ciudades</h2>
+            <div id="contenedorCiudades">
+                <p class="mensaje-inicial">Presiona el botón para mostrar la lista de ciudades.</p>
+            </div>
+        </section>
+
+        <section class="boton-seccion">
+            <button id="btnMostrarLista">Mostrar lista</button>
+        </section>
+
+        <footer>
+            <p>Proyecto desarrollado por: Jennifer Estrada Avendaño</p>
+            <p>@ 2026 - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
